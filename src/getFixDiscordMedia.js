@@ -1,5 +1,5 @@
 
-const getFixDiscordMedia = function (oldURL) {
+const getFixDiscordMedia = async function (oldURL) {
     const tokens = /https:\/\/media\.discordapp\.net\/attachments\/(\w+\/\w+\/\w+.mp4)/.exec(oldURL);
     if (!tokens) {
         return;

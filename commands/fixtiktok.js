@@ -11,12 +11,12 @@ module.exports = {
             .setRequired(true)),
     async execute(client, interaction) {
         const user_url = interaction.options.getString('url');
-        const fixtiktokURL = getFixtiktokURL(user_url);
+        const fixtiktokURL = await getFixtiktokURL(user_url);
         if (fixtiktokURL) {
-            interaction.reply(fixtiktokURL);
+            await interaction.reply(fixtiktokURL);
         }
         else {
-            interaction.reply({content: 'No tiktok link could be found.', ephemeral: true});
+            await interaction.reply({content: 'No tiktok link could be found.', ephemeral: true});
         }
     },
 };

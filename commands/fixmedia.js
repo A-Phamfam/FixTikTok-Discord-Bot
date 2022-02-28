@@ -11,12 +11,12 @@ module.exports = {
             .setRequired(true)),
     async execute(client, interaction) {
         const user_url = interaction.options.getString('url');
-        let discordMediaURL = getFixDiscordMedia(user_url);
+        let discordMediaURL = await getFixDiscordMedia(user_url);
         if (discordMediaURL) {
-            interaction.reply(discordMediaURL);
+            await interaction.reply(discordMediaURL);
         }
         else {
-            interaction.reply({content: 'No discord media video link could be found.', ephemeral: true});
+            await interaction.reply({content: 'No discord media video link could be found.', ephemeral: true});
         }
     },
 };

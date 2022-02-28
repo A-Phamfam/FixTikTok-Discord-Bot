@@ -8,12 +8,12 @@ module.exports = {
         .setType(ApplicationCommandType.Message),
     async execute(client, interaction) {
         const msg = await interaction.options.getMessage('message');
-        const discordMediaURL = getFixDiscordMedia(msg);
+        const discordMediaURL = await getFixDiscordMedia(msg);
         if (discordMediaURL) {
-            interaction.reply(discordMediaURL);
+            await interaction.reply(discordMediaURL);
         }
         else {
-            interaction.reply({content: 'No discord media video link could be found.', ephemeral: true});
+            await interaction.reply({content: 'No discord media video link could be found.', ephemeral: true});
         }
     },
 };

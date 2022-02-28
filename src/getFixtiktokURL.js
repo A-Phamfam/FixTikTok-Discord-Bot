@@ -1,5 +1,5 @@
 
-const getFixtiktokURL = function (oldURL) {
+const getFixtiktokURL = async function (oldURL) {
 
     let tokens = /https:\/\/vm.tiktok.com\/(\w+)\//.exec(oldURL);
     if (tokens !== null && tokens.length >= 2) {

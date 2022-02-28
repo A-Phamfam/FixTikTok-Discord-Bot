@@ -8,12 +8,12 @@ module.exports = {
         .setType(ApplicationCommandType.Message),
     async execute(client, interaction) {
         const msg = await interaction.options.getMessage('message');
-        const fixtiktokURL = getFixtiktokURL(msg);
+        const fixtiktokURL = await getFixtiktokURL(msg);
         if (fixtiktokURL) {
-            interaction.reply(fixtiktokURL);
+            await interaction.reply(fixtiktokURL);
         }
         else {
-            interaction.reply({content: 'No tiktok link could be found.', ephemeral: true});
+            await interaction.reply({content: 'No tiktok link could be found.', ephemeral: true});
         }
     },
 };
