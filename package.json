@@ -1,0 +1,38 @@
+{
+  "name": "fixtiktok-discord-bot",
+  "version": "1.0.0",
+  "description": "A bot for fixing tiktok links on Discord",
+  "main": "index.js",
+  "dependencies": {
+    "@discordjs/builders": "^0.11.0",
+    "@discordjs/rest": "^0.2.0-canary.0",
+    "cheerio": "^1.0.0-rc.2",
+    "discord-api-types": "^0.26.1",
+    "discord.js": "^13.6.0",
+    "dotenv": "^6.0.0",
+    "mustache": "^2.3.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-Phamfam/FixTikTok-Discord-Bot.git"
+  },
+  "keywords": [
+    "tiktok",
+    "discord",
+    "bot"
+  ],
+  "author": "phamfam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/A-Phamfam/FixTikTok-Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/A-Phamfam/FixTikTok-Discord-Bot#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
