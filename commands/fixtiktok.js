@@ -4,7 +4,7 @@ const getFixtiktokURL = require('../src/getFixtiktokURL');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('fixtiktok')
-        .setDescription('Fix tiktok URL so that it will embed')
+        .setDescription('Fix TikTok URL so that it will embed')
         .addStringOption((option) => option
             .setName('url')
             .setDescription('tiktok URL')
@@ -16,7 +16,7 @@ module.exports = {
             await interaction.reply(fixtiktokURL);
         }
         else {
-            await interaction.reply({content: 'No tiktok link could be found.', ephemeral: true});
+            await interaction.reply({content: 'No TikTok link could be found.', ephemeral: true});
         }
     },
 };

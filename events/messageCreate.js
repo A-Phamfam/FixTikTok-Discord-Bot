@@ -20,7 +20,7 @@ module.exports = {
         if (fixtiktokURL) {
             const author = (client.serverDisabledSettings['author_ping'].includes(msg.guildId))
                 ? msg.author.tag : `<@${msg.author.id}>`
-            await msg.channel.send(`Fixed tiktok URL from ${author} \n${fixtiktokURL}`);
+            await msg.channel.send(`Fixed TikTok URL from ${author} \n${fixtiktokURL}`);
 
             if (client.serverDisabledSettings['delete_original'].includes(msg.guildId)) {
                 return;

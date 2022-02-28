@@ -13,7 +13,7 @@ module.exports = {
             await interaction.reply(fixtiktokURL);
         }
         else {
-            await interaction.reply({content: 'No tiktok link could be found.', ephemeral: true});
+            await interaction.reply({content: 'No TikTok link could be found.', ephemeral: true});
         }
     },
 };

@@ -1,7 +1,7 @@
 {
   "name": "fixtiktok-discord-bot",
   "version": "1.0.0",
-  "description": "A bot for fixing tiktok links on Discord",
+  "description": "A bot for fixing TikTok links on Discord",
   "main": "index.js",
   "dependencies": {
     "@discordjs/builders": "^0.11.0",

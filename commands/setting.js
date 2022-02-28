@@ -17,7 +17,7 @@ module.exports = {
         )
         .addSubcommand( (subcommand) => subcommand
             .setName('delete_original')
-            .setDescription('Set deleting of original fixed tiktok message')
+            .setDescription('Set deleting of original fixed TikTok message')
             .addBooleanOption( (option) => option
                 .setName('enabled')
                 .setDescription('Enable setting')
