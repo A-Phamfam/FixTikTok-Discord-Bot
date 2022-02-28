@@ -61,7 +61,7 @@ typings/
 testing_scripts/*.m 
 
 # server settings
-serverSettings.json
+serversDisabledSettings.json
 
 # Log file
 log.txt

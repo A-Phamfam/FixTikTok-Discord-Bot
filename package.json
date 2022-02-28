@@ -10,6 +10,8 @@
     "discord-api-types": "^0.26.1",
     "discord.js": "^13.6.0",
     "dotenv": "^6.0.0",
+    "fs": "^0.0.1-security",
+    "lodash": "^4.17.21",
     "mustache": "^2.3.0",
     "request": "^2.87.0",
     "request-promise": "^4.2.6"

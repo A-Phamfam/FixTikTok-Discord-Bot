@@ -12,14 +12,32 @@ module.exports = {
             return;
         }
 
-        let fixtiktokURL = getFixtiktokURL(msg.content);
-        if (fixtiktokURL) {
-            msg.channel.send(fixtiktokURL);
+        if (client.serverDisabledSettings['autofix'].includes(msg.guildId)) {
+            return;
         }
 
-        let discordMediaURL = getFixDiscordMedia(msg.content);
+        let fixtiktokURL = await getFixtiktokURL(msg.content);
+        if (fixtiktokURL) {
+            const author = (client.serverDisabledSettings['author_ping'].includes(msg.guildId))
+                ? msg.author.tag : `<@${msg.author.id}>`
+            await msg.channel.send(`Fixed tiktok URL from ${author} \n${fixtiktokURL}`);
+
+            if (client.serverDisabledSettings['delete_original'].includes(msg.guildId)) {
+                return;
+            }
+            await msg.delete()
+        }
+
+        let discordMediaURL = await getFixDiscordMedia(msg.content);
         if (discordMediaURL) {
-            msg.channel.send(discordMediaURL);
+            const author = (client.serverDisabledSettings['author_ping'].includes(msg.guildId))
+                ? msg.author.tag : `<@${msg.author.id}>`
+            await msg.channel.send(`Fixed video URL from ${author} \n${discordMediaURL}`);
+
+            if (client.serverDisabledSettings['delete_original'].includes(msg.guildId)) {
+                return;
+            }
+            await msg.delete()
         }
 
     },

@@ -29,6 +29,13 @@ for (const file of eventFiles) {
 }
 
 // Import server settings
-client.serverSettings = require('./serverSettings.json')
+try {
+    client.serverDisabledSettings = require('./serversDisabledSettings.json')
+} catch {
+    client.serverDisabledSettings = {"autofix":[],"delete_original":[],"author_ping":[]};
+    fs.writeFile('serversDisabledSettings.json', JSON.stringify(client.serverDisabledSettings), (err => {
+        if (err) console.log(err);
+    }))
+}
 
 client.login(process.env.BOT_TOKEN).then();
