@@ -28,4 +28,7 @@ for (const file of eventFiles) {
     }
 }
 
+// Import server settings
+client.serverSettings = require('./serverSettings.json')
+
 client.login(process.env.BOT_TOKEN).then();

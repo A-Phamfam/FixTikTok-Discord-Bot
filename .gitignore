@@ -60,6 +60,8 @@ typings/
 # test scrips 
 testing_scripts/*.m 
 
+# server settings
+serverSettings.json
 
 # Log file
 log.txt
