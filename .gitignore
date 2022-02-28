@@ -60,25 +60,12 @@ typings/
 # test scrips 
 testing_scripts/*.m 
 
-# latex image file
-img/latex.png
 
 # Log file
 log.txt
 
-# inchat octave outputs
-inchat_octave/bot_out.txt
-inchat_octave/user_printout.png
-inchat_octave/user_code.m
-inchat_octave/workspaces/*.mat
-inchat_octave/user_upload.*
-inchat_octave/run_scrum.m
-
 # VScode file
 .vscode
-
-# Storage files
-storage/cronjob_data.json
 
 # next.js build output
 .next
